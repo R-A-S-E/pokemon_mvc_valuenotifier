@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:state_project/src/pages/home/controller/home_controller.dart';
 import 'package:state_project/src/services/current_state.dart';
 
@@ -10,7 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final HomeController controller = HomeController();
+  final HomeController controller = GetIt.instance.get();
 
   @override
   void initState() {
